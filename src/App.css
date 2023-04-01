@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+/* home */
+.home {
+  padding: 1rem;
+  max-width: 1200px;
+  width: 98%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blogs {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+  width: 100% !important;
+}
+@media only screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .cover {
+    height: auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-side .card {
+  margin-bottom: 1rem;
+}
+.avetar {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+@media (min-width: 992px) {
+  .avetar {
+    margin-left: 2rem;
+  }
+}
+.cover {
+  width: 100%;
+  height: 400px;
+}
+
+.info_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.author_info {
+  display: flex;
+  flex-direction: column;
+}
+.author_info span {
+  text-transform: capitalize;
+}
+.author_info span:first-of-type {
+  font-size: 18px;
+  font-weight: 600;
+}
+.author_info span:last-of-type {
+  font-size: 16px;
+  font-weight: 400;
+}
+.spent {
+  background: #1111110d;
+  border-radius: 8px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6047ec;
+  margin-bottom: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+.bookmarks {
+  background: #1111110d;
+  border-radius: 8px;
+  padding: 1rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bookmarks span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.bookmark {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.bookmark p {
+  font-weight: 600;
+}
+.read-time {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-toggler,
+button:focus:not(:focus-visible),
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+@media only screen and (max-width: 400px) {
+  .cover {
+    height: 200px;
   }
-  to {
-    transform: rotate(360deg);
+  .card-title,
+  .author_info span:first-of-type {
+    font-size: 16px;
   }
 }
